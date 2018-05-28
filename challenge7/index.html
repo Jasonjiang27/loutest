@@ -7,8 +7,8 @@
     </head>
     <body>
         <ul>
-            {% for title in title_list %}
-            <li> {{title}}</li>
+            {% for file in files %}
+            <li> <a href="{{ url_for('file', file_id=file.id) }}" target="_blank">{{ file.title }}</a></li>
             {% endfor %}
         </ul>
     </body>
