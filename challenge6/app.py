@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 class Files(object):
 
-    directory = os.path.join(os.path.abspath(os.path.dirname(__name__)), '..', 'files')    #返回files里面的文件目录路径
+    directory = os.path.join(os.path.abspath(os.path.dirname(__name__)), '..', 'files')    #返回files文件夹目录路径'..'代表返回上一级目录
 
     def __init__(self):
         self._files = self._read_all_files()
