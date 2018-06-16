@@ -13,7 +13,7 @@ class GithubinfoSpider(scrapy.Spider):
         return (url_tmpl.format(i) for i in range(1,5))
     
     def parse(self,response):
-        print('------------------------------------')
+        #print('------------------------------------')  调试
         for repo in response.css('li.public'):
             item = GithubcrawlItem()
             item['name']=repo.xpath('.//a[@itemprop="name codeRepository"]/text()').re_first('\n\s*(.*)')
